@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Styles for the overlay */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Styles for the popup */
+    .popup {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    
+  </style>
+</head>
+<body style="background-color: antiquewhite;">
+
+  <!-- Button to open the popup -->
+  <button id="openPopupBtn">click here .</button>
+
+  <!-- The overlay and popup container -->
+  <div class="overlay" id="overlay">
+    <div class="popup" id="popup">
+      <p>you are mostly welcome!!!!!!!!!!!!!!!</p>
+      <button onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    // Function to open the popup
+    function openPopup() {
+      document.getElementById('overlay').style.display = 'flex';
+    }
+
+    // Function to close the popup
+    function closePopup() {
+      document.getElementById('overlay').style.display = 'none';
+    }
+
+    // Attach the openPopup function to the button click event
+    document.getElementById('openPopupBtn').addEventListener('click', openPopup);
+  </script>
+
+</body>
+</html>
